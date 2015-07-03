@@ -1,0 +1,2 @@
+# BotAgario
+launcher.user.js
