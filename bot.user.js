@@ -4,7 +4,7 @@
 // @include     http://agar.io/
 // @version     2.20
 // @grant       none
-// @author      youtube.com/RednelssPlay
+// @author      vk.com/id302545750
 // ==/UserScript==
 
 
