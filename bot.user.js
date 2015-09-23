@@ -857,13 +857,11 @@ console.log("Running rednelss Bot!");
                         }
                         var perfectAngle = (bIndex[0] + bIndex[1] / 2).mod(360);
 
-                        perfectAngle = shiftAngle(obstacleAngles, perfectAngle, bIndex);
-
+                       var secureDistance = (enemyCanSplit ? splitDangerDistance : normalDangerDistance); 
                         var line1 = followAngle(perfectAngle, player[k].x, player[k].y, 300);
 
-                        drawLine(player[k].x, player[k].y, line1[0], line1[1], 7);
-                        tempMoveX = line1[0];
-                        tempMoveY = line1[1];
+                         if (this.computeDistance(allPossibleThreats[i].x, allPossibleThreats[i].y, clusterAllFood[j][0], clusterAllFood[j][1]) < secureDistance + shiftDistance)
+                                 clusterAllFood.splice(j, 1);
                     } else if (badAngles.length > 0 && goodAngles == 0) {
                         //TODO: CODE TO HANDLE WHEN THERE IS NO GOOD ANGLE BUT THERE ARE ENEMIES AROUND!!!!!!!!!!!!!
                     } else if (clusterAllFood.length > 0) {
